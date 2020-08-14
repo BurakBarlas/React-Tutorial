@@ -9,4 +9,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Simple user form application which provides features such as adding new users with user information and deleting.
 
-![](ezgif.com-crop.gif)
+![](User App.gif)
