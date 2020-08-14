@@ -1,0 +1,22 @@
+{
+    "users" : [
+    {
+        "id" : "unique-1",
+        "name" : "Burak Barlas",
+        "department" : "CS:go",
+        "income" : "1000"
+      },
+      {
+        "id" : "unique-2",
+        "name" : "berkay Barlas",
+        "department" : "CS",
+        "income" : "1234"
+      },
+      {
+        "id" : "unique-3",
+        "name" : "nihat Uzun",
+        "department" : "salaryman",
+        "income" : "5312"
+      }
+    ]
+}

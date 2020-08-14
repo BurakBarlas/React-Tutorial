@@ -5,25 +5,19 @@ import UserConsumer from '../context'
 class User extends Component {
     state = {
         isVisible : false
-    }
-    // constructor(props) {
-    //     super(props);
+    } 
 
-    //     this.state = {
-    //         isVisible : false
-    //     }
-    // }
- 
     onClickEvent = (e) =>{
         this.setState({
             isVisible : !this.state.isVisible
         })    
     }
-
     onDeleteUser = (dispatch,e) => {
+        console.log("delete_userbutton")
         const {id} = this.props;
-        dispatch({type : "DELETE_USER",payload:id});
+        dispatch({type : "DELETE_USER", payload:id});
     }
+    
     render() {
         const {name, department, income} = this.props;
         const {isVisible} =this.state;
@@ -33,11 +27,13 @@ class User extends Component {
                     const {dispatch} = value;
                     return (
                         <div className = "col-md-8 mb-4">
-                            <div className="card">
-                                <div className="card-header.d-flex.justify-content-between">
+                            <div className="card" style = {isVisible ? {backgroundColor : "#c9e1f3"} : null}>
+                                <div className="card-header d-flex justify-content-between">
                                     <h1 className = "d-inlene" onClick ={this.onClickEvent.bind(this,34)}>{name}</h1>
-                                    <i onClick = {this.onDeleteUser.bind(this,dispatch)}></i>
-                                    <i className="gg-trash" style = {{cursor : "pointer"}}></i> 
+                                    <i className="gg-trash" 
+                                        style = {{cursor : "pointer"}}
+                                        onClick = {this.onDeleteUser.bind(this,dispatch)}
+                                    ></i> 
                                 </div>
                                 {
                                     isVisible ? <div className = "card-body">
@@ -54,8 +50,6 @@ class User extends Component {
             }
 
         </UserConsumer>)
-            
-        
     }
 }
 User.defaultPropTypes = {
@@ -67,7 +61,7 @@ User.propTypes = {
     name : propTypes.string.isRequired,
     department : propTypes.string.isRequired,
     income : propTypes.string.isRequired,
-    //id : propTypes.number.isRequired
+    id : propTypes.string.isRequired
 }
 
 export default User;
