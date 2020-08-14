@@ -9,4 +9,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Simple user form application which provides features such as adding new users with user information and deleting.
 
-![](user-app.gif)
+<!-- ![https://raw.githubusercontent.com/BurakBarlas/React-Tutorial/master/user-app.gif](user-app.gif){:height="20px" width="36px"} -->
+<img src="user-app.gif" alt="drawing" width="300" height="300"/> 
